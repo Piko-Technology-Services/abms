@@ -1,0 +1,59 @@
+/*
+  Global stylesheet for the ABMS Limited site.
+
+  This project intentionally ships WITHOUT the Sterial template's design
+  assets (fonts, css, js, images) since those belong to the purchased/
+  downloaded template package. Copy the template's asset folders into the
+  `public/` directory exactly as follows and this file (and every page)
+  will pick them up automatically -- no code changes required:
+
+    public/
+      favicon.png
+      css/
+        style.css
+        tiny-slider.css
+        aos.css
+        flatpickr.min.css
+        glightbox.min.css
+      js/
+        bootstrap.bundle.min.js
+        tiny-slider.js
+        aos.js
+        navbar.js
+        counter.js
+        rellax.js
+        flatpickr.js
+        glightbox.min.js
+        custom.js
+      fonts/
+        icomoon/...
+        flaticon/...
+      images/
+        hero_1.jpg, hero_2.jpg, img_v_1.jpg, img_v_2.jpg,
+        img-1.jpg ... img-7.jpg, gal_1.jpg ... gal_6.jpg,
+        person_1.jpg, person_2.jpg, person_3.jpg,
+        svg/01.svg ... 04.svg, ...
+
+  See README.md for the full checklist. Everything below this comment is
+  only a minimal fallback so the site is still legible before the assets
+  are added -- once css/style.css is in place it takes over almost
+  entirely via normal CSS cascade/specificity.
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Fallback (pre-asset) styling only -- harmless once style.css loads */
+:root {
+  --fallback-ink: #1c1f23;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
