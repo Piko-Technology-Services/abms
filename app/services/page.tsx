@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import BackgroundNetwork from "@/components/BackgroundNetwork";
 import { services, targetIndustries } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function ServicesPage() {
         <div className="img-bg rellax">
           <img src="/images/hero_2.jpg" alt="ABMS Limited services" className="img-fluid" />
         </div>
+        <BackgroundNetwork />
         <div className="container">
           <div className="row align-items-center justify-content-start">
             <div className="col-lg-5">
@@ -50,7 +52,7 @@ export default function ServicesPage() {
           </div>
           <div className="row">
             {services.map((s, i) => (
-              <div className="col-lg-3" key={s.id}>
+              <div className="col-lg-3" key={s.id} data-aos="fade-up" data-aos-delay={String((i + 1) * 100)}>
                 <div className="service-2 left-0 mb-5">
                   <img src={`/images/${galleryImages[i]}`} alt={s.title} className="img-fluid mb-4 rounded" />
                   <div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import BackgroundNetwork from "@/components/BackgroundNetwork";
 import {
   company,
   services,
@@ -34,6 +35,7 @@ export default function Home() {
         <div className="img-bg rellax">
           <img src="/images/hero_1.jpg" alt="ABMS Limited mining operations" className="img-fluid" />
         </div>
+        <BackgroundNetwork />
         <div className="container">
           <div className="row align-items-center justify-content-start">
             <div className="col-lg-6">
@@ -63,7 +65,10 @@ export default function Home() {
       {/* WHO WE ARE --------------------------------------------------- */}
       <div className="section section-2">
         <div className="container">
+
           <div className="row align-items-center justify-content-between">
+             
+
             <div className="col-lg-6 order-lg-2 mb-5 mb-lg-0">
               <div className="image-stack mb-5 mb-lg-0">
                 <div className="image-stack__item image-stack__item--bottom" data-aos="fade-up">
@@ -100,6 +105,7 @@ export default function Home() {
 
       {/* SERVICES ------------------------------------------------------ */}
       <div className="section service-section-1">
+
         <div className="container">
           <div className="row">
             <div className="col-lg-3 mb-4 mb-lg-0">
@@ -197,10 +203,16 @@ export default function Home() {
       <div className="section">
         <div className="container">
           <div className="row justify-content-between align-items-center">
+            
             <div className="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-up">
+              <BackgroundNetwork />
+
               <img src="/images/img-1.jpg" alt="ABMS Limited site operations" className="img-fluid" />
             </div>
+            
             <div className="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+              <BackgroundNetwork />
+
               <h2 className="heading mb-4">Our Commitment to Excellence</h2>
               <p>{commitmentQuote}</p>
               <p className="my-4" data-aos="fade-up" data-aos-delay="200">
@@ -215,7 +227,9 @@ export default function Home() {
 
       {/* WHY CHOOSE US (repurposed testimonial slider) --------------------- */}
       <div className="section bg-light">
+
         <h2 className="heading mb-5 text-center">Why Choose Us</h2>
+
 
         <div className="text-center mb-5">
           <div id="prevnext-testimonial">
@@ -230,9 +244,12 @@ export default function Home() {
 
         <div className="wide-slider-testimonial-wrap">
           <div className="wide-slider-testimonial">
+            
             {whyChooseUs.map((point, i) => (
               <div className="item" key={i}>
+
                 <blockquote className="block-testimonial">
+                  
                   <div className="author">
                     <h3>{company.shortName}</h3>
                     <p className="position mb-5">Our Commitment</p>
@@ -256,6 +273,8 @@ export default function Home() {
               <img src="/images/img_v_2.jpg" alt="ABMS Limited operations" className="img-fluid" />
             </div>
             <div className="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+              <BackgroundNetwork />
+
               <h2 className="heading mb-5">
                 Frequently Asked <br /> Questions
               </h2>
@@ -273,6 +292,7 @@ export default function Home() {
                         aria-controls={`faqCollapse${i}`}
                       >
                         {item.q}
+                        <span className="abms-accordion-icon" aria-hidden="true"></span>
                       </button>
                     </h2>
                     <div

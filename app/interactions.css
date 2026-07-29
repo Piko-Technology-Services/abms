@@ -1,0 +1,849 @@
+/* ==========================================================================
+   ABMS Limited — Interaction & Motion Layer
+   --------------------------------------------------------------------------
+   Sits on top of the existing Sterial template stylesheet (style.css).
+   It never redefines layout, color palette, or type — it only adds
+   transitions, hover states, and a handful of small keyframe animations
+   so the existing markup/classes feel considered and alive.
+
+   Signature motif: a slow-moving amber/rust "vein" — used sparingly in
+   the scroll-progress bar and the CTA background — nods to the mining
+   subject without turning the whole site into a mood board.
+
+   Import this file AFTER /css/style.css in app/layout.tsx.
+   ========================================================================== */
+
+:root {
+  --abms-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --abms-ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --abms-fast: 200ms;
+  --abms-base: 380ms;
+  --abms-slow: 650ms;
+  --abms-lift-shadow: 0 26px 48px -22px rgba(15, 15, 15, 0.4);
+  --abms-lift-shadow-sm: 0 14px 28px -16px rgba(15, 15, 15, 0.32);
+  --abms-accent: var(--bs-primary, #b5651d);
+  --abms-accent-soft: rgba(181, 101, 29, 0.14);
+  --abms-accent-line: linear-gradient(90deg, #7c4210, var(--abms-accent), #e2a75e);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll progress — the "vein" running along the top of the viewport
+   -------------------------------------------------------------------------- */
+.abms-scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 2000;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.04);
+}
+.abms-scroll-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--abms-accent-line);
+  box-shadow: 0 0 14px rgba(181, 101, 29, 0.6);
+  transition: width 90ms linear;
+}
+
+/* --------------------------------------------------------------------------
+   Global focus + link polish
+   -------------------------------------------------------------------------- */
+a {
+  transition: color var(--abms-base) var(--abms-ease);
+}
+:focus-visible {
+  outline: 2px solid var(--abms-accent);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — sweep fill + lift, works for .btn-primary and .btn-outline-white
+   -------------------------------------------------------------------------- */
+.btn {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
+  overflow: hidden;
+  transition: transform var(--abms-fast) var(--abms-ease),
+    box-shadow var(--abms-base) var(--abms-ease),
+    color var(--abms-base) var(--abms-ease),
+    background-color var(--abms-base) var(--abms-ease),
+    border-color var(--abms-base) var(--abms-ease);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(-105%);
+  transition: transform var(--abms-slow) var(--abms-ease);
+}
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: translateX(0);
+}
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--abms-lift-shadow-sm);
+}
+.btn:active {
+  transform: translateY(-1px);
+  transition-duration: var(--abms-fast);
+}
+
+/* --------------------------------------------------------------------------
+   Background network — interactive line/particle layer over the hero photo
+   -------------------------------------------------------------------------- */
+.abms-network-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* clicks/taps pass through to hero content */
+  mix-blend-mode: screen;
+  opacity: 0.65;
+}
+@media (max-width: 767.98px) {
+  .abms-network-canvas {
+    opacity: 0.45;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .abms-network-canvas {
+    opacity: 0.3;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero — ambient float on the background image, no layout impact
+   -------------------------------------------------------------------------- */
+.hero .img-bg {
+  overflow: hidden;
+}
+.hero .img-bg img {
+  transform: scale(1.06);
+  animation: abms-hero-drift 18s var(--abms-ease) infinite alternate;
+  will-change: transform;
+}
+@keyframes abms-hero-drift {
+  from {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.12) translate3d(0, -1.2%, 0);
+  }
+}
+.hero h1,
+.hero p {
+  animation: abms-rise var(--abms-slow) var(--abms-ease) both;
+}
+.hero p {
+  animation-delay: 90ms;
+}
+.hero > .container > .row > div > div {
+  animation-delay: 180ms;
+}
+@keyframes abms-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Image stack (Who We Are)
+   -------------------------------------------------------------------------- */
+.image-stack__item {
+  overflow: hidden;
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.image-stack__item img {
+  transition: transform var(--abms-slow) var(--abms-ease);
+}
+.image-stack:hover .image-stack__item--bottom {
+  transform: translate3d(-6px, -6px, 0);
+}
+.image-stack:hover .image-stack__item--top {
+  transform: translate3d(6px, 6px, 0) rotate(0.5deg);
+}
+.image-stack__item:hover img {
+  transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   Service cards (home) — .service-1 is an <a> wrapping icon + copy
+   -------------------------------------------------------------------------- */
+.service-1 {
+  position: relative;
+  display: block;
+  transition: transform var(--abms-base) var(--abms-ease),
+    box-shadow var(--abms-base) var(--abms-ease);
+}
+.service-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--abms-accent-line);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.service-1:hover,
+.service-1:focus-visible {
+  transform: translateY(-8px);
+  box-shadow: var(--abms-lift-shadow-sm);
+}
+.service-1:hover::after,
+.service-1:focus-visible::after {
+  transform: scaleX(1);
+}
+.service-1 .icon {
+  display: inline-block;
+  transition: transform var(--abms-base) var(--abms-ease-snap);
+}
+.service-1 .icon img {
+  transition: filter var(--abms-base) var(--abms-ease);
+}
+.service-1:hover .icon {
+  transform: scale(1.12) rotate(-6deg);
+}
+.service-1:hover .icon img {
+  filter: drop-shadow(0 6px 10px var(--abms-accent-soft));
+}
+.service-1 h3 {
+  transition: color var(--abms-base) var(--abms-ease);
+}
+.service-1:hover h3 {
+  color: var(--abms-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Industries slider — .destination
+   -------------------------------------------------------------------------- */
+.destination .thumb {
+  position: relative;
+  overflow: hidden;
+}
+.destination .thumb img {
+  transition: transform var(--abms-slow) var(--abms-ease);
+}
+.destination .thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.45) 100%);
+  opacity: 0;
+  transition: opacity var(--abms-base) var(--abms-ease);
+}
+.destination:hover .thumb img {
+  transform: scale(1.08);
+}
+.destination:hover .thumb::after {
+  opacity: 1;
+}
+.destination h3 a {
+  background-image: var(--abms-accent-line);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size var(--abms-base) var(--abms-ease), color var(--abms-base) var(--abms-ease);
+  padding-bottom: 2px;
+}
+.destination:hover h3 a {
+  background-size: 100% 2px;
+}
+.destination .meta {
+  display: inline-block;
+  transition: transform var(--abms-base) var(--abms-ease), opacity var(--abms-base) var(--abms-ease);
+}
+.destination:hover .meta {
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Why Choose Us — .block-testimonial
+   -------------------------------------------------------------------------- */
+.wide-slider-testimonial .item {
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.block-testimonial {
+  transition: box-shadow var(--abms-base) var(--abms-ease), transform var(--abms-base) var(--abms-ease);
+}
+.block-testimonial .quote {
+  display: inline-block;
+  transition: transform var(--abms-base) var(--abms-ease-snap), color var(--abms-base) var(--abms-ease);
+}
+.wide-slider-testimonial .item:hover .block-testimonial {
+  transform: translateY(-6px);
+  box-shadow: var(--abms-lift-shadow-sm);
+}
+.wide-slider-testimonial .item:hover .quote {
+  transform: scale(1.15);
+  color: var(--abms-accent);
+}
+
+/* Prev/next arrow controls (industries + testimonial sliders) */
+#destination-controls .prev,
+#destination-controls .next,
+#prevnext-testimonial .prev,
+#prevnext-testimonial .next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--abms-fast) var(--abms-ease), background-color var(--abms-base) var(--abms-ease),
+    color var(--abms-base) var(--abms-ease);
+  cursor: pointer;
+}
+#destination-controls .prev:hover,
+#destination-controls .next:hover,
+#prevnext-testimonial .prev:hover,
+#prevnext-testimonial .next:hover {
+  transform: scale(1.12);
+  color: var(--abms-accent);
+}
+#destination-controls .prev:active,
+#destination-controls .next:active,
+#prevnext-testimonial .prev:active,
+#prevnext-testimonial .next:active {
+  transform: scale(0.94);
+}
+
+/* --------------------------------------------------------------------------
+   FAQ accordion
+   -------------------------------------------------------------------------- */
+.custom-accordion .accordion-item {
+  transition: border-color var(--abms-base) var(--abms-ease);
+}
+.custom-accordion .btn-link {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-right: 2rem;
+  transition: color var(--abms-base) var(--abms-ease), padding-left var(--abms-base) var(--abms-ease);
+}
+.custom-accordion .btn-link:hover {
+  color: var(--abms-accent);
+  padding-left: 0.35rem;
+}
+.abms-accordion-icon {
+  position: absolute;
+  right: 0.1rem;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform var(--abms-base) var(--abms-ease-snap);
+  pointer-events: none;
+}
+.abms-accordion-icon::before,
+.abms-accordion-icon::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  border-radius: 2px;
+}
+.abms-accordion-icon::before {
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+.abms-accordion-icon::after {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+  transition: opacity var(--abms-base) var(--abms-ease);
+}
+.custom-accordion .btn-link[aria-expanded="true"] .abms-accordion-icon {
+  transform: translateY(-50%) rotate(180deg);
+  color: var(--abms-accent);
+}
+.custom-accordion .btn-link[aria-expanded="true"] .abms-accordion-icon::after {
+  opacity: 0;
+}
+.accordion-body {
+  animation: abms-fade-in var(--abms-base) var(--abms-ease) both;
+}
+@keyframes abms-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Core values / gallery cards — .media-entry
+   -------------------------------------------------------------------------- */
+.media-entry {
+  display: block;
+  overflow: hidden;
+  transition: transform var(--abms-base) var(--abms-ease), box-shadow var(--abms-base) var(--abms-ease);
+}
+.media-entry a img,
+.media-entry > a {
+  display: block;
+  overflow: hidden;
+}
+.media-entry img {
+  transition: transform var(--abms-slow) var(--abms-ease);
+}
+.media-entry:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--abms-lift-shadow-sm);
+}
+.media-entry:hover img {
+  transform: scale(1.08);
+}
+.media-entry .date {
+  transition: color var(--abms-base) var(--abms-ease);
+}
+.media-entry:hover .date {
+  color: var(--abms-accent);
+}
+.media-entry .more {
+  transition: gap var(--abms-base) var(--abms-ease), color var(--abms-base) var(--abms-ease);
+}
+.media-entry .more .arrow {
+  display: inline-block;
+  transition: transform var(--abms-base) var(--abms-ease-snap);
+}
+.media-entry:hover .more {
+  color: var(--abms-accent);
+}
+.media-entry:hover .more .arrow {
+  transform: translateX(5px);
+}
+
+/* --------------------------------------------------------------------------
+   Services page — quick-link gallery cards (.service-2)
+   -------------------------------------------------------------------------- */
+.service-2 {
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.service-2 img {
+  overflow: hidden;
+  transition: transform var(--abms-slow) var(--abms-ease), box-shadow var(--abms-base) var(--abms-ease);
+}
+.service-2:hover img {
+  transform: scale(1.045) translateY(-2px);
+  box-shadow: var(--abms-lift-shadow-sm);
+}
+.service-2 h3 {
+  transition: color var(--abms-base) var(--abms-ease);
+}
+.service-2:hover h3 {
+  color: var(--abms-accent);
+}
+.service-2 .more {
+  position: relative;
+  display: inline-block;
+}
+.service-2 .more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: var(--abms-accent-line);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.service-2:hover .more::after {
+  transform: scaleX(1);
+}
+
+/* Detailed service line items */
+.service-section-1 .icon-checkmark {
+  display: inline-block;
+  transition: transform var(--abms-fast) var(--abms-ease-snap), color var(--abms-base) var(--abms-ease);
+}
+.service-section-1 .col-md-6:hover .icon-checkmark {
+  transform: scale(1.25);
+  color: var(--abms-accent);
+}
+.service-section-1 .col-md-6 > .d-flex {
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.service-section-1 .col-md-6:hover > .d-flex {
+  transform: translateX(3px);
+}
+
+/* Target industries (services page) plain cards */
+.service-section-1 .service-1:hover {
+  background-color: var(--abms-accent-soft);
+}
+
+/* --------------------------------------------------------------------------
+   CTA band — subtle moving stripe texture, restrained + slow
+   -------------------------------------------------------------------------- */
+.py-5.bg-primary {
+  position: relative;
+  overflow: hidden;
+}
+.py-5.bg-primary::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10%;
+  background: repeating-linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 2px,
+    transparent 2px,
+    transparent 26px
+  );
+  animation: abms-stripe-drift 22s linear infinite;
+  pointer-events: none;
+}
+.py-5.bg-primary > .container {
+  position: relative;
+  z-index: 1;
+}
+@keyframes abms-stripe-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-90px, 0, 0);
+  }
+}
+.py-5.bg-primary h3 {
+  transition: letter-spacing var(--abms-slow) var(--abms-ease);
+}
+.py-5.bg-primary:hover h3 {
+  letter-spacing: 0.3px;
+}
+
+/* --------------------------------------------------------------------------
+   Commitment section image
+   -------------------------------------------------------------------------- */
+.section img.img-fluid {
+  transition: transform var(--abms-slow) var(--abms-ease), box-shadow var(--abms-base) var(--abms-ease);
+}
+
+/* --------------------------------------------------------------------------
+   Section heading reveal (complements AOS, purely decorative underline grow)
+   -------------------------------------------------------------------------- */
+.heading-content h2::after,
+h2.heading::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 14px;
+  background: var(--abms-accent-line);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: abms-underline-grow var(--abms-slow) var(--abms-ease) 200ms both;
+}
+@keyframes abms-underline-grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ==========================================================================
+   Header — scroll-aware shell, animated nav links, burger-to-X, CTA sheen
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Header logo — spiral rings, echoing the Loader's ring animation
+   -------------------------------------------------------------------------- */
+.abms-logo-spiral {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.abms-logo-spiral__ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.45;
+  transition: opacity var(--abms-base, 380ms) var(--ease, var(--abms-ease)),
+    filter var(--abms-base, 380ms) var(--ease, var(--abms-ease));
+}
+.abms-logo-spiral__ring--inner {
+  inset: -7px;
+  border: 2px solid transparent;
+  border-top-color: var(--orange, var(--abms-accent));
+  border-right-color: var(--orange-2, var(--abms-accent));
+  animation: abms-logo-spin 2.6s linear infinite;
+}
+.abms-logo-spiral__ring--outer {
+  inset: -13px;
+  border: 1.5px solid transparent;
+  border-bottom-color: var(--orange-2, var(--abms-accent));
+  border-left-color: rgba(255, 255, 255, 0.4);
+  animation: abms-logo-spin-rev 4.2s linear infinite;
+}
+.abms-logo-spiral:hover .abms-logo-spiral__ring,
+.abms-logo-spiral:focus-visible .abms-logo-spiral__ring {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px var(--abms-accent-soft));
+}
+.abms-logo-spiral:hover .abms-logo-spiral__ring--inner,
+.abms-logo-spiral:focus-visible .abms-logo-spiral__ring--inner {
+  animation-duration: 1s;
+}
+.abms-logo-spiral:hover .abms-logo-spiral__ring--outer,
+.abms-logo-spiral:focus-visible .abms-logo-spiral__ring--outer {
+  animation-duration: 1.8s;
+}
+.abms-logo-spiral .site-logo {
+  position: relative;
+  z-index: 1;
+  transition: transform var(--abms-base, 380ms) var(--abms-ease-snap);
+}
+.abms-logo-spiral:hover .site-logo,
+.abms-logo-spiral:focus-visible .site-logo {
+  transform: scale(1.06);
+}
+.abms-logo__stage { position: relative; width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; }
+
+.abms-logo-spiral img { width: 88%; height: 88%; object-fit: contain; animation: abms-badge-float 2.4s ease-in-out infinite; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .abms-logo-spiral__ring {
+    animation: none;
+    opacity: 0.3;
+  }
+}
+@keyframes abms-logo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes abms-logo-spin-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes abms-badge-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+
+.site-nav {
+  transition: background-color var(--abms-base) var(--abms-ease),
+    box-shadow var(--abms-base) var(--abms-ease), padding var(--abms-base) var(--abms-ease);
+}
+.site-nav.abms-nav--scrolled {
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: saturate(140%) blur(6px);
+  box-shadow: 0 8px 24px -18px rgba(0, 0, 0, 0.45);
+}
+
+/* Logo */
+.site-nav .logo {
+  display: inline-block;
+  transition: color var(--abms-base) var(--abms-ease), transform var(--abms-base) var(--abms-ease-snap),
+    letter-spacing var(--abms-base) var(--abms-ease);
+}
+.site-nav .logo:hover,
+.site-nav .logo:focus-visible {
+  color: var(--abms-accent);
+  transform: translateY(-1px);
+  letter-spacing: 0.3px;
+}
+
+/* Desktop nav links — per-item animated underline + active dot */
+.site-menu li {
+  position: relative;
+}
+.site-menu li > a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color var(--abms-base) var(--abms-ease);
+}
+.site-menu li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--abms-accent-line);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--abms-base) var(--abms-ease);
+}
+.site-menu li:hover > a,
+.site-menu li > a:focus-visible {
+  color: var(--abms-accent);
+}
+.site-menu li:hover > a::after,
+.site-menu li > a:focus-visible::after {
+  transform: scaleX(1);
+}
+.site-menu li.active > a {
+  color: var(--abms-accent);
+}
+.site-menu li.active > a::after {
+  transform: scaleX(1);
+}
+/* subtle settle-in on first paint */
+.site-menu li {
+  animation: abms-nav-item-in var(--abms-base) var(--abms-ease) both;
+}
+.site-menu li:nth-child(1) { animation-delay: 40ms; }
+.site-menu li:nth-child(2) { animation-delay: 80ms; }
+.site-menu li:nth-child(3) { animation-delay: 120ms; }
+.site-menu li:nth-child(4) { animation-delay: 160ms; }
+.site-menu li:nth-child(5) { animation-delay: 200ms; }
+.site-menu li:nth-child(6) { animation-delay: 240ms; }
+.site-menu li:nth-child(7) { animation-delay: 280ms; }
+.site-menu li:nth-child(8) { animation-delay: 320ms; }
+@keyframes abms-nav-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Us — pill CTA with sweep + lift, matching .btn language */
+.site-menu li.cta-button {
+  animation: none;
+}
+.site-menu li.cta-button > a {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 0.55rem 1.3rem;
+  border-radius: 999px;
+  display: inline-block;
+  transition: transform var(--abms-fast) var(--abms-ease), box-shadow var(--abms-base) var(--abms-ease),
+    color var(--abms-base) var(--abms-ease), background-color var(--abms-base) var(--abms-ease);
+}
+.site-menu li.cta-button > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateX(-105%);
+  transition: transform var(--abms-slow) var(--abms-ease);
+}
+.site-menu li.cta-button > a::after {
+  display: none; /* no underline on the pill */
+}
+.site-menu li.cta-button:hover > a::before {
+  transform: translateX(0);
+}
+.site-menu li.cta-button:hover > a {
+  transform: translateY(-2px);
+  box-shadow: var(--abms-lift-shadow-sm);
+}
+
+/* Burger → X transform, driven by aria-expanded on the trigger */
+.burger {
+  position: relative;
+  width: 26px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.burger span,
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform var(--abms-base) var(--abms-ease-snap), opacity var(--abms-fast) var(--abms-ease),
+    top var(--abms-base) var(--abms-ease);
+}
+.burger span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger span::before {
+  top: -7px;
+}
+.burger span::after {
+  top: 7px;
+}
+.burger:hover span,
+.burger:hover span::before,
+.burger:hover span::after {
+  background: var(--abms-accent);
+}
+.burger[aria-expanded="true"] span {
+  background: transparent;
+}
+.burger[aria-expanded="true"] span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger[aria-expanded="true"] span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile menu panel — fade + slide, respects the template's own show/hide class */
+.site-mobile-menu {
+  transition: opacity var(--abms-base) var(--abms-ease), transform var(--abms-base) var(--abms-ease);
+}
+.site-mobile-menu-body li {
+  transition: transform var(--abms-fast) var(--abms-ease), color var(--abms-base) var(--abms-ease);
+}
+.site-mobile-menu-body li:hover,
+.site-mobile-menu-body li:hover a {
+  color: var(--abms-accent);
+}
+.site-mobile-menu-body li:hover {
+  transform: translateX(4px);
+}
+.site-mobile-menu-close {
+  transition: transform var(--abms-base) var(--abms-ease-snap), color var(--abms-base) var(--abms-ease);
+}
+.site-mobile-menu-close:hover {
+  transform: rotate(90deg);
+  color: var(--abms-accent);
+}

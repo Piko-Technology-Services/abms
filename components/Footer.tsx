@@ -7,10 +7,24 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-4">
             <div className="widget">
-              <h3>
-                {company.shortName}
-                <span className="text-primary">.</span>
-              </h3>
+              <a href="/" className="d-inline-block abms-logo-spiral">
+                <div
+                  className="abms-logo__stage mb-3"
+                  style={{
+                    backgroundColor: "#fff",
+                    borderRadius: "50%",
+                    aspectRatio: "1 / 1",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "0.25rem",
+                  }}
+                >
+                    <span className="abms-logo-spiral__ring abms-logo-spiral__ring--outer" aria-hidden="true"></span>
+                    <span className="abms-logo-spiral__ring abms-logo-spiral__ring--inner" aria-hidden="true"></span>
+                    <img src="/images/logo.png" alt={company.name} className="site-logo"/>
+                </div>
+              </a>
               <p>
                 A Zambian-registered mining services and general trading
                 company headquartered in Lusaka, serving clients across

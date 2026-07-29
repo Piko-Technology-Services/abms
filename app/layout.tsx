@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "./interactions.css";
 import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
   title: {
@@ -55,6 +58,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
+        {/* Scroll progress hairline — added on top of the template, mounted once globally */}
+        <ScrollProgress />
+
         {/* Mobile menu shell -- populated/toggled by js/navbar.js + js/custom.js */}
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -65,17 +71,19 @@ export default function RootLayout({
           <div className="site-mobile-menu-body"></div>
         </div>
 
+        <Loader />
+
         {children}
 
         <Footer />
 
         {/* Preloader */}
-        <div id="overlayer"></div>
-        <div className="loader">
+        {/* <div id="overlayer"></div> */}
+        {/* <div className="loader">
           <div className="spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Sterial template scripts -- paste js/ into /public/js (see README.md) */}
         <Script src="/js/bootstrap.bundle.min.js" strategy="afterInteractive" />

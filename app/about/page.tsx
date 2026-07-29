@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import BackgroundNetwork from "@/components/BackgroundNetwork";
 import {
   whoWeAre,
   vision,
@@ -25,11 +26,14 @@ export default function AboutPage() {
     <>
       <Header active="about" />
 
+
       {/* HERO ------------------------------------------------------- */}
       <div className="hero overlay">
         <div className="img-bg rellax">
           <img src="/images/hero_1.jpg" alt="ABMS Limited" className="img-fluid" />
         </div>
+                <BackgroundNetwork />
+
         <div className="container">
           <div className="row align-items-center justify-content-start">
             <div className="col-lg-5">
