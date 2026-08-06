@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const industryImages = [
-    "img-1.jpg",
-    "img-2.jpg",
-    "img-3.jpg",
-    "img-4.jpg",
-    "img-5.jpg",
-    "img-6.jpg",
+    "/new/mine.jpg",
+    "/new/mining.jpg",
+    "/new/manufacturing.jpg",
+    "/new/government.jpg",
+    "/new/agriculture.jpg",
+    "/new/energy.jpg",
   ];
 
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       {/* HERO ------------------------------------------------------- */}
       <div className="hero overlay">
         <div className="img-bg rellax">
-          <img src="/images/hero_1.jpg" alt="ABMS Limited mining operations" className="img-fluid" />
+          <img src="/images/new/mine.jpg" alt="ABMS Limited mining operations" className="img-fluid" />
         </div>
         <BackgroundNetwork />
         <div className="container">
@@ -70,9 +70,9 @@ export default function Home() {
              
 
             <div className="col-lg-6 order-lg-2 mb-5 mb-lg-0">
-              <div className="image-stack mb-5 mb-lg-0">
+              <div className="image-stack mb-3 mb-lg-0">
                 <div className="image-stack__item image-stack__item--bottom" data-aos="fade-up">
-                  <img src="/images/img_v_1.jpg" alt="ABMS Limited field operations" className="img-fluid rellax" />
+                  <img src="/images/new/underground-tunnel-railway-new-york-city-united-states.jpg" alt="ABMS Limited field operations" className="img-fluid rellax"/>
                 </div>
                 <div
                   className="image-stack__item image-stack__item--top"
@@ -80,7 +80,7 @@ export default function Home() {
                   data-aos-delay="100"
                   data-rellax-percentage="0.5"
                 >
-                  <img src="/images/img_v_2.jpg" alt="ABMS Limited equipment" className="img-fluid" />
+                  <img src="/images/new/mining.jpg" alt="ABMS Limited equipment" className="img-fluid" />
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function Home() {
         <div className="container">
           <div className="row justify-content-between align-items-center">
             <div className="col-lg-5 mb-4 mb-lg-0">
-              <img src="/images/img_v_2.jpg" alt="ABMS Limited operations" className="img-fluid" />
+              <img src="/images/new/logistics portrait.jpg" alt="ABMS Limited operations" className="img-fluid" />
             </div>
             <div className="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
               <BackgroundNetwork />
@@ -310,44 +310,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* CORE VALUES (recent-posts layout repurposed) ------------------------ */}
-      <div className="section">
-        <div className="container">
-          <div className="row">
-            <div className="col-12" data-aos="fade-up" data-aos-delay="0">
-              <h2 className="heading mb-5">Our Core Values</h2>
-            </div>
-          </div>
-          <div className="row align-items-stretch">
-            {coreValues.slice(0, 4).map((v, i) => (
-              <div
-                className="col-6 col-sm-6 col-md-6 col-lg-3"
-                data-aos="fade-up"
-                data-aos-delay={String((i + 1) * 100)}
-                key={v.code}
-              >
-                <div className="media-entry">
-                  <a href="/about">
-                    <img src={`/images/gal_${i + 1}.jpg`} alt={v.label} className="img-fluid" />
-                  </a>
-                  <div className="bg-white m-body">
-                    <span className="date">{v.code}</span>
-                    <h3>
-                      <a href="/about">{v.label}</a>
-                    </h3>
-                    <a href="/about" className="more d-flex align-items-center float-start">
-                      <span className="label">Learn More</span>
-                      <span className="arrow">
-                        <span className="icon-keyboard_arrow_right"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* CTA -------------------------------------------------------------- */}
       <div className="py-5 bg-primary">
