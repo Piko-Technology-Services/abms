@@ -9,7 +9,7 @@ export default function IndustriesPage() {
              {/* HERO ------------------------------------------------------- */}
              <div className="hero overlay">
                <div className="img-bg rellax">
-                 <img src="/images/hero_2.jpg" alt="Contact ABMS Limited" className="img-fluid" />
+                 <img src="/images/new/manufacturing.jpg" alt="Contact ABMS Limited" className="img-fluid" />
                </div>
                        <BackgroundNetwork />
 
@@ -17,44 +17,17 @@ export default function IndustriesPage() {
                  <div className="row align-items-center justify-content-start">
                    <div className="col-lg-6 mx-auto text-center">
                      <h1 className="heading" data-aos="fade-up">
-                       Contact
+                       Industries We Serve
                      </h1>
                      <p data-aos="fade-up">
-                       Speak with our team about mining services, mining support,
-                       general trading or logistics requirements anywhere in
-                       Zambia.
+                       Supporting businesses and institutions across Zambia and the
+                  wider African region with reliable mining, supply, logistics,
+                  procurement, and operational solutions.
                      </p>
                    </div>
                  </div>
                </div>
              </div>
-
-    
-        {/* Hero Section */}
-        <section className="hero-section  my-5">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-7">
-                <span className="eyebrow">ABMS LIMITED</span>
-
-                <h1>Industries We Serve</h1>
-
-                <p>
-                  Supporting businesses and institutions across Zambia and the
-                  wider African region with reliable mining, supply, logistics,
-                  procurement, and operational solutions.
-                </p>
-              </div>
-
-              <div className="col-lg-5">
-                {/* Placeholder for industries hero image */}
-                <div className="content-placeholder">
-                  Industries Hero Image
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Introduction */}
         <section className="section">

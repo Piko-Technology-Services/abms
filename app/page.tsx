@@ -207,7 +207,7 @@ export default function Home() {
             <div className="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-up">
               <BackgroundNetwork />
 
-              <img src="/images/img-1.jpg" alt="ABMS Limited site operations" className="img-fluid" />
+              <img src="/images/new/bucket.jpg" alt="ABMS Limited site operations" className="img-fluid" />
             </div>
             
             <div className="col-lg-5" data-aos="fade-up" data-aos-delay="100">
@@ -225,45 +225,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* WHY CHOOSE US (repurposed testimonial slider) --------------------- */}
-      <div className="section bg-light">
-
-        <h2 className="heading mb-5 text-center">Why Choose Us</h2>
-
-
-        <div className="text-center mb-5">
-          <div id="prevnext-testimonial">
-            <span className="prev me-3" data-controls="prev">
-              <span className="icon-chevron-left"></span>
-            </span>
-            <span className="next" data-controls="next">
-              <span className="icon-chevron-right"></span>
-            </span>
-          </div>
-        </div>
-
-        <div className="wide-slider-testimonial-wrap">
-          <div className="wide-slider-testimonial">
-            
-            {whyChooseUs.map((point, i) => (
-              <div className="item" key={i}>
-
-                <blockquote className="block-testimonial">
-                  
-                  <div className="author">
-                    <h3>{company.shortName}</h3>
-                    <p className="position mb-5">Our Commitment</p>
-                  </div>
-                  <p>
-                    <span className="quote">&ldquo;</span>
-                    &ldquo;{point}&rdquo;
-                  </p>
-                </blockquote>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* FAQ ------------------------------------------------------------- */}
       <div className="section">

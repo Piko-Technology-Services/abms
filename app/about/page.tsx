@@ -21,6 +21,32 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const firstFour = coreValues.slice(0, 4);
   const restFour = coreValues.slice(4);
+  const leadershipTeam = [
+    {
+      name: "Moabi Makebe",
+      role: "Chief Executive Officer",
+      description:
+        "Moabi Makebe is an accomplished Metallurgical Engineer with over 16 years of international experience across gold, platinum group metals, autocatalyst manufacturing, and uranium processing. He brings technical expertise, strategic leadership, and operational excellence across complex metallurgical and mining operations.",
+    },
+    {
+      name: "Cornelius Ngandu",
+      role: "Financial Leader",
+      description:
+        "Cornelius Ngandu has over 17 years of specialized management accounting experience in the mining sector. He holds an Advanced Diploma in Management Accounting from CIMA and is skilled in cost control, financial strategy, and operational efficiency for complex industrial environments.",
+    },
+    {
+      name: "Benny Mumba",
+      role: "Strategic Finance Executive",
+      description:
+        "Benny Mumba brings more than 15 years of finance leadership across mining, industrial, and security sectors. He has held senior roles including Chief Accountant at Kayelekera Uranium Mine and has a strong track record in governance, ERP transformation, and profitability improvement.",
+    },
+    {
+      name: "Malama Brian Bwembya",
+      role: "Procurement and Operations Leader",
+      description:
+        "Malama Brian Bwembya has over 16 years of experience delivering procurement, supply chain, logistics, and operational solutions across Africa and Asia. His expertise includes strategic sourcing, contract management, supplier development, and operational transformation for major mining projects.",
+    },
+  ];
 
   return (
     <>
@@ -30,7 +56,7 @@ export default function AboutPage() {
       {/* HERO ------------------------------------------------------- */}
       <div className="hero overlay">
         <div className="img-bg rellax">
-          <img src="/images/hero_1.jpg" alt="ABMS Limited" className="img-fluid" />
+          <img src="/images/new/dump truck.jpg" alt="ABMS Limited" className="img-fluid" />
         </div>
                 <BackgroundNetwork />
 
@@ -57,7 +83,7 @@ export default function AboutPage() {
             <div className="col-lg-6 order-lg-2 mb-5 mb-lg-0">
               <div className="image-stack mb-5 mb-lg-0">
                 <div className="image-stack__item image-stack__item--bottom" data-aos="fade-up">
-                  <img src="/images/img_v_1.jpg" alt="ABMS Limited team" className="img-fluid rellax" />
+                  <img src="/images/new/bucket.jpg" alt="ABMS Limited team" className="img-fluid rellax" />
                 </div>
                 <div
                   className="image-stack__item image-stack__item--top"
@@ -65,7 +91,7 @@ export default function AboutPage() {
                   data-aos-delay="100"
                   data-rellax-percentage="0.5"
                 >
-                  <img src="/images/img_v_2.jpg" alt="ABMS Limited on site" className="img-fluid" />
+                  <img src="/images/new/mining.jpg" alt="ABMS Limited on site" className="img-fluid" />
                 </div>
               </div>
             </div>
@@ -158,30 +184,31 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* EXPERTISE (person cards repurposed) -------------------------------- */}
-      <div className="section">
+  
+
+      {/* LEADERSHIP TEAM ---------------------------------------------------- */}
+      <div className="section bg-light">
         <div className="container">
           <div className="row mb-5">
             <div className="col-lg-6 mx-auto text-center">
               <div className="heading-content" data-aos="fade-up">
-                <h2 className="heading">Our Core Expertise</h2>
+                <h2 className="heading">Leadership Team</h2>
                 <p>
-                  Combined expertise of nineteen founding professionals
-                  across mining, engineering, construction, logistics and
-                  procurement.
+                  Meet the executives whose technical and commercial leadership drives ABMS forward.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="row">
-            {expertiseTeams.map((t) => (
-              <div className="col-lg-4" key={t.title}>
-                <div className="person">
-                  <img src={`/images/${t.image}`} alt={t.title} className="img-fluid mb-4" />
-                  <span className="subheading d-inline-block">{t.label}</span>
-                  <h3 className="mb-3">{t.title}</h3>
-                  <p className="text-muted">{t.text}</p>
+            {leadershipTeam.map((member) => (
+              <div className="col-lg-6 mb-4" key={member.name}>
+                <div className="bg-white p-4 rounded job-position h-100" data-aos="fade-up">
+                  <div className="mb-3">
+                    <span className="block subtitle">{member.role}</span>
+                    <h2 className="m-0">{member.name}</h2>
+                  </div>
+                  <p>{member.description}</p>
                 </div>
               </div>
             ))}
