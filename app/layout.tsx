@@ -10,85 +10,31 @@ import ScrollProgress from "@/components/ScrollProgress";
 const siteUrl = "https://abmslimited.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-
-  title: {
-    default: "ABMS Limited — Mining Services & General Trading, Zambia",
-    template: "%s | ABMS Limited",
-  },
+  title: "ABMS Limited | Mining Services & General Trading Zambia",
 
   description:
-    "African Brotherhood Mining Services & General Trading Limited provides mining services, mining support, general trading, logistics, PPE supply and industrial solutions across Zambia.",
-
-  keywords: [
-    "ABMS Limited",
-    "African Brotherhood Mining Services",
-    "mining services Zambia",
-    "mining companies Zambia",
-    "mining support Zambia",
-    "general trading Zambia",
-    "mining logistics Zambia",
-    "PPE supply Zambia",
-    "earthmoving Zambia",
-    "industrial supplies Zambia",
-    "Lusaka mining company",
-    "Zambia mining services",
-  ],
-
-  authors: [
-    {
-      name: "African Brotherhood Mining Services & General Trading Limited",
-      url: siteUrl,
-    },
-  ],
-
-  creator:
-    "African Brotherhood Mining Services & General Trading Limited",
-
-  publisher:
-    "African Brotherhood Mining Services & General Trading Limited",
+    "African Brotherhood Mining Services & General Trading Limited provides mining services, mining support, general trading, logistics and industrial solutions across Zambia.",
 
   alternates: {
-    canonical: siteUrl,
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-      "max-snippet": -1,
-    },
-  },
-
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    canonical: "https://abmslimited.com",
   },
 
   openGraph: {
     type: "website",
-    locale: "en_ZM",
-    url: siteUrl,
-
-    siteName: "ABMS Limited",
+    url: "https://abmslimited.com",
 
     title:
-      "ABMS Limited — Mining Services & General Trading, Zambia",
+      "ABMS Limited | Mining Services & General Trading Zambia",
 
     description:
-      "Mining services, mining support, general trading, logistics, PPE supply and industrial solutions across Zambia.",
+      "Mining services, mining support, general trading, logistics and industrial solutions across Zambia.",
 
     images: [
       {
-        url: "/images/og-image.png",
+        url: "https://abmslimited.com/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ABMS Limited — Mining Services & General Trading, Zambia",
+        alt: "ABMS Limited — Mining Services & General Trading Zambia",
       },
     ],
   },
@@ -97,12 +43,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "ABMS Limited — Mining Services & General Trading, Zambia",
+      "ABMS Limited | Mining Services & General Trading Zambia",
 
     description:
       "Mining services, mining support, general trading, logistics and industrial solutions across Zambia.",
 
-    images: ["/images/og-image.png"],
+    images: ["https://abmslimited.com/images/og-image.png"],
   },
 };
 
