@@ -19,9 +19,11 @@ export default function HSEPage() {
                         Health, Safety & Environment
                       </h1>
                       <p data-aos="fade-up">
-                       Safety, responsible operations, environmental awareness, and
-                  regulatory compliance are central to how we deliver our
-                  services.
+                        At ABMS Limited we prioritise the health and safety of
+                        our people, partners and the communities where we
+                        operate. We embed environmental stewardship and
+                        regulatory compliance into every stage of project
+                        delivery to ensure safe, sustainable outcomes.
                       </p>
                     </div>
                   </div>
@@ -47,15 +49,20 @@ export default function HSEPage() {
                 <h2>Safety Is an Operational Priority</h2>
 
                 <p>
-                  Placeholder content describing ABMS Limited’s commitment to
-                  protecting employees, clients, contractors, communities, and
-                  the environment.
+                  ABMS Limited is committed to protecting the wellbeing of
+                  employees, clients and contractors by maintaining robust
+                  safety systems, clear accountabilities and proactive
+                  incident prevention. We work closely with local
+                  stakeholders to minimise community and environmental
+                  impacts.
                 </p>
 
                 <p>
-                  Placeholder content describing how safety requirements are
-                  incorporated into planning, operations, supervision, and
-                  project delivery.
+                  Safety requirements are integrated into planning and
+                  operations through risk-based procedures, permit-to-work
+                  controls, competency assurance and on-site supervision.
+                  Continuous monitoring and lessons-learned activities drive
+                  ongoing improvement.
                 </p>
               </div>
             </div>
@@ -72,8 +79,10 @@ export default function HSEPage() {
                 <h2>Our Key Commitments</h2>
 
                 <p>
-                  Placeholder introduction to the company’s HSE principles and
-                  operational standards.
+                  Our HSE framework is built on leadership, risk
+                  management, training and compliance. We set measurable
+                  targets, audit performance regularly and ensure full
+                  regulatory alignment across all operations.
                 </p>
               </div>
             </div>
@@ -86,8 +95,9 @@ export default function HSEPage() {
                   <h3>Health & Wellbeing</h3>
 
                   <p>
-                    Placeholder content covering employee health, wellbeing,
-                    workplace conditions, and occupational health practices.
+                      We promote physical and mental wellbeing through health
+                      surveillance, access to occupational health services,
+                      fatigue management and wellness programmes.
                   </p>
                 </article>
               </div>
@@ -99,8 +109,9 @@ export default function HSEPage() {
                   <h3>Workplace Safety</h3>
 
                   <p>
-                    Placeholder content covering hazard identification, risk
-                    assessment, safety procedures, and incident prevention.
+                    Our safety programme focuses on hazard identification,
+                    rigorous risk assessment, standardised procedures and
+                    behaviour-based safety to prevent incidents on site.
                   </p>
                 </article>
               </div>
@@ -112,8 +123,9 @@ export default function HSEPage() {
                   <h3>Environmental Responsibility</h3>
 
                   <p>
-                    Placeholder content covering environmental protection,
-                    responsible resource use, and waste management.
+                    We minimise environmental impact by controlling
+                    emissions, protecting biodiversity, conserving resources
+                    and applying waste-reduction and recycling practices.
                   </p>
                 </article>
               </div>
@@ -125,8 +137,9 @@ export default function HSEPage() {
                   <h3>Training & Awareness</h3>
 
                   <p>
-                    Placeholder content covering HSE training, employee
-                    awareness, inductions, and continuous improvement.
+                    Training and competency development ensure employees
+                    and contractors understand risks, operate safely and
+                    contribute to continuous HSE improvement.
                   </p>
                 </article>
               </div>
@@ -138,8 +151,9 @@ export default function HSEPage() {
                   <h3>Risk Management</h3>
 
                   <p>
-                    Placeholder content covering operational risk assessment,
-                    control measures, monitoring, and reporting.
+                    Our risk management approach combines quantitative and
+                    qualitative assessments, control implementation,
+                    performance monitoring and transparent reporting.
                   </p>
                 </article>
               </div>
@@ -151,9 +165,9 @@ export default function HSEPage() {
                   <h3>Compliance</h3>
 
                   <p>
-                    Placeholder content covering compliance with applicable
-                    laws, regulations, client requirements, and industry
-                    standards.
+                    We maintain compliance with all applicable legislation,
+                    client requirements and recognised industry standards,
+                    supported by regular audits and corrective action plans.
                   </p>
                 </article>
               </div>
@@ -171,13 +185,17 @@ export default function HSEPage() {
                 <h2>Our Responsibility</h2>
 
                 <p>
-                  Placeholder for the official ABMS Health, Safety and
-                  Environmental Policy statement.
+                  ABMS Limited’s HSE Policy commits to zero harm, legal
+                  compliance and continual improvement. We will identify
+                  and control risks, consult with our workforce, and
+                  allocate resources to maintain safe and environmentally
+                  responsible operations.
                 </p>
 
                 <p>
-                  The final policy can be added here once it has been approved
-                  by management.
+                  The policy is supported by measurable objectives, regular
+                  training and a governance structure ensuring senior
+                  management accountability for HSE performance.
                 </p>
 
                 
@@ -202,8 +220,10 @@ export default function HSEPage() {
               <h2>Committed to Safe and Responsible Operations</h2>
 
               <p>
-                Contact us to learn more about our operational standards and
-                HSE approach.
+                For enquiries about our HSE systems, training or to discuss
+                site-specific requirements, contact our HSE team. We
+                provide tailored support to meet client and regulatory
+                expectations.
               </p>
 
               <a href="/contact" className="btn btn-primary">

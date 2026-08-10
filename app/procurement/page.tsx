@@ -10,18 +10,20 @@ export default function ProcurementPage() {
              {/* HERO ------------------------------------------------------- */}
              <div className="hero overlay">
                <div className="img-bg rellax">
-                 <img src="/images/hero_2.jpg" alt="Contact ABMS Limited" className="img-fluid" />
+                 <img src="/images/new/procurement.jpg" alt="Contact ABMS Limited" className="img-fluid" />
                </div>
                <div className="container">
                  <div className="row align-items-center justify-content-start">
                    <div className="col-lg-6 mx-auto text-center">
                      <h1 className="heading" data-aos="fade-up">
-                       Contact
+                       Procurement & Supply
                      </h1>
                      <p data-aos="fade-up">
-                       Speak with our team about mining services, mining support,
-                       general trading or logistics requirements anywhere in
-                       Zambia.
+                       Work with our procurement specialists to source industrial
+                       materials, equipment and services for mining, construction,
+                       logistics and general trade across Zambia and Southern Africa.
+                       We manage supplier selection, tendering, contract compliance
+                       and reliable delivery.
                      </p>
                    </div>
                  </div>
@@ -44,9 +46,8 @@ export default function ProcurementPage() {
               </div>
 
               <div className="col-lg-5">
-                <div className="content-placeholder">
-                  Procurement Hero Image
-                </div>
+                                <img src="/images/new/procurement1.jpg" alt="Careers at ABMS Limited" className="img-fluid rounded" />
+
               </div>
             </div>
           </div>
@@ -57,9 +58,8 @@ export default function ProcurementPage() {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-lg-6">
-                <div className="content-placeholder">
-                  Supplier Partnership Image
-                </div>
+                                <img src="/images/new/procurement.png" alt="Careers at ABMS Limited" className="img-fluid rounded" />
+
               </div>
 
               <div className="col-lg-6">
@@ -68,15 +68,15 @@ export default function ProcurementPage() {
                 <h2>Working With Reliable Suppliers</h2>
 
                 <p>
-                  Placeholder content describing ABMS supplier partnerships,
-                  sourcing requirements, supplier evaluation, and procurement
-                  standards.
+                  ABMS Limited partners with accredited suppliers across Zambia
+                  and southern Africa to supply essential materials, equipment
+                  and services for mining, construction and logistics projects.
                 </p>
 
                 <p>
-                  Placeholder content describing the company’s commitment to
-                  quality, reliability, competitive pricing, transparency, and
-                  responsible procurement.
+                  Our procurement process focuses on compliance, delivery
+                  performance, competitive pricing and long-term supplier
+                  relationships that support safe, efficient operations.
                 </p>
               </div>
             </div>
@@ -93,8 +93,9 @@ export default function ProcurementPage() {
                 <h2>Areas of Supplier Interest</h2>
 
                 <p>
-                  Placeholder introduction to the products and services ABMS
-                  may procure from qualified suppliers.
+                  ABMS is looking for suppliers who can support operational
+                  requirements with dependable products and services across
+                  mining, industrial, construction and logistics categories.
                 </p>
               </div>
             </div>
@@ -105,8 +106,8 @@ export default function ProcurementPage() {
                   <h3>Mining Equipment</h3>
 
                   <p>
-                    Placeholder content for mining equipment, machinery,
-                    components, tools, and related supplies.
+                    Providers of excavators, haul trucks, drills, conveyors,
+                    wear parts and specialist mining machinery for site work.
                   </p>
                 </article>
               </div>
@@ -116,8 +117,9 @@ export default function ProcurementPage() {
                   <h3>Industrial Supplies</h3>
 
                   <p>
-                    Placeholder content for industrial materials, consumables,
-                    equipment, and operational supplies.
+                    Suppliers of safety equipment, electrical components,
+                    hydraulics, fasteners, welding consumables and maintenance
+                    materials.
                   </p>
                 </article>
               </div>
@@ -127,8 +129,9 @@ export default function ProcurementPage() {
                   <h3>Construction Materials</h3>
 
                   <p>
-                    Placeholder content for construction materials, equipment,
-                    and project-related supplies.
+                    Suppliers of concrete, steel reinforcement, piping,
+                    aggregates, formwork and construction supplies for project
+                    works.
                   </p>
                 </article>
               </div>
@@ -138,8 +141,8 @@ export default function ProcurementPage() {
                   <h3>Transport & Logistics</h3>
 
                   <p>
-                    Placeholder content for transportation, freight,
-                    warehousing, and logistics support services.
+                    Freight, haulage, warehousing and logistics support for the
+                    movement of goods, materials and equipment to project sites.
                   </p>
                 </article>
               </div>
@@ -149,8 +152,8 @@ export default function ProcurementPage() {
                   <h3>Professional Services</h3>
 
                   <p>
-                    Placeholder content for technical, engineering, advisory,
-                    consulting, and specialist services.
+                    Engineering, surveying, environmental consultancy, project
+                    management and technical advisory services.
                   </p>
                 </article>
               </div>
@@ -160,8 +163,8 @@ export default function ProcurementPage() {
                   <h3>General Trading</h3>
 
                   <p>
-                    Placeholder content for general goods, office supplies,
-                    consumables, and other products.
+                    Providers of office supplies, PPE, general consumables,
+                    packaging and support goods for site and office operations.
                   </p>
                 </article>
               </div>
@@ -179,8 +182,9 @@ export default function ProcurementPage() {
                 <h2>Supplier Registration</h2>
 
                 <p>
-                  Placeholder content explaining the ABMS supplier registration
-                  and prequalification process.
+                  To become an approved ABMS supplier, companies must complete
+                  our registration process and provide documentation for
+                  verification and prequalification.
                 </p>
               </div>
 
@@ -199,8 +203,9 @@ export default function ProcurementPage() {
                   </ul>
 
                   <p>
-                    Final supplier requirements will be confirmed by the ABMS
-                    procurement department.
+                    Our procurement team uses this information to confirm the
+                    supplier’s capability, compliance and readiness for ABMS
+                    supply contracts.
                   </p>
                 </div>
               </div>
@@ -218,8 +223,9 @@ export default function ProcurementPage() {
                 <h2>Register Your Company With ABMS</h2>
 
                 <p>
-                  Placeholder content inviting qualified suppliers and service
-                  providers to submit their company information.
+                  If your business can supply quality goods or services for
+                  mining, construction or logistics operations, send your
+                  company details for evaluation by the ABMS procurement team.
                 </p>
               </div>
 
@@ -233,7 +239,7 @@ export default function ProcurementPage() {
         </section>
 
         {/* Procurement Contact */}
-        <section className="section">
+        {/* <section className="section">
           <div className="container">
             <div className="cta-section text-center">
               <span className="eyebrow">PROCUREMENT ENQUIRIES</span>
@@ -241,8 +247,9 @@ export default function ProcurementPage() {
               <h2>Contact the Procurement Team</h2>
 
               <p>
-                Placeholder procurement contact details and enquiry
-                information.
+                For procurement enquiries or supplier onboarding information,
+                please visit our contact page to speak with the ABMS
+                procurement office.
               </p>
 
               <a href="/contact" className="btn btn-outline-primary">
@@ -250,7 +257,7 @@ export default function ProcurementPage() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       
     </>
   );

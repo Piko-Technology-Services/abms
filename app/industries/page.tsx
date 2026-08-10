@@ -20,9 +20,10 @@ export default function IndustriesPage() {
                        Industries We Serve
                      </h1>
                      <p data-aos="fade-up">
-                       Supporting businesses and institutions across Zambia and the
-                  wider African region with reliable mining, supply, logistics,
-                  procurement, and operational solutions.
+                       We partner with organisations across Zambia and the wider
+                       African region to deliver integrated mining support,
+                       strategic procurement, supply chain logistics and on-site
+                       operational services tailored to local conditions.
                      </p>
                    </div>
                  </div>
@@ -39,9 +40,10 @@ export default function IndustriesPage() {
                 <h2>Supporting Zambia’s Industrial Growth</h2>
 
                 <p>
-                  ABMS Limited provides flexible and integrated solutions
-                  designed around the operational requirements of different
-                  industries.
+                  ABMS Limited delivers industry-specific services — from
+                  equipment supply and materials procurement to onsite project
+                  management and logistics — designed to improve uptime, reduce
+                  costs and comply with regional regulations.
                 </p>
               </div>
             </div>
@@ -62,8 +64,10 @@ export default function IndustriesPage() {
                   <h3>Mining Companies</h3>
 
                   <p>
-                    Placeholder content describing mining services, operational
-                    support, equipment, supply, and logistics solutions.
+                    We provide exploration and production support, heavy-duty
+                    equipment supply and rental, spare parts procurement, and
+                    logistics solutions including mine-site transport and
+                    staged deliveries to maximise production continuity.
                   </p>
                 </article>
               </div>
@@ -78,8 +82,10 @@ export default function IndustriesPage() {
                   <h3>Construction Firms</h3>
 
                   <p>
-                    Placeholder content describing construction support,
-                    materials supply, procurement, and logistics services.
+                    Services for contractors include bulk materials supply,
+                    specialist plant hire, site logistics coordination,
+                    scaffold and temporary works procurement, and safety
+                    compliance support for large civil and building projects.
                   </p>
                 </article>
               </div>
@@ -94,8 +100,10 @@ export default function IndustriesPage() {
                   <h3>Manufacturing Industries</h3>
 
                   <p>
-                    Placeholder content describing industrial supply,
-                    procurement, operational support, and logistics solutions.
+                    Support for manufacturers spans raw material sourcing,
+                    spare parts provisioning, inventory management,
+                    preventative maintenance programs and just-in-time
+                    logistics to reduce downtime and working capital.
                   </p>
                 </article>
               </div>
@@ -110,8 +118,10 @@ export default function IndustriesPage() {
                   <h3>Government Institutions</h3>
 
                   <p>
-                    Placeholder content describing supply, procurement, project
-                    support, and advisory services.
+                    Procurement and project support for public sector bodies —
+                    including tender advisory, compliant supply solutions,
+                    asset management and technical advisory to deliver
+                    transparent, cost-effective outcomes.
                   </p>
                 </article>
               </div>
@@ -126,8 +136,10 @@ export default function IndustriesPage() {
                   <h3>Agricultural Enterprises</h3>
 
                   <p>
-                    Placeholder content describing agricultural supply,
-                    logistics, procurement, and operational solutions.
+                    Agricultural support services include bulk fertiliser and
+                    seed supply, cold-chain and farm-to-market logistics,
+                    equipment servicing and seasonal procurement planning to
+                    improve yields and farm profitability.
                   </p>
                 </article>
               </div>
@@ -142,8 +154,10 @@ export default function IndustriesPage() {
                   <h3>Energy & Utility Companies</h3>
 
                   <p>
-                    Placeholder content describing supply, logistics,
-                    procurement, and technical support services.
+                    We assist energy and utility firms with critical spares
+                    procurement, transformer and generator supply, field
+                    service technicians and logistics for remote site
+                    maintenance and emergency response.
                   </p>
                 </article>
               </div>
@@ -160,8 +174,9 @@ export default function IndustriesPage() {
               <h2>Let’s Discuss Your Industry Requirements</h2>
 
               <p>
-                Contact our team to discuss tailored solutions for your
-                organisation or project.
+                Contact our commercial team to discuss a tailored scope,
+                receive a project quotation or arrange a site survey and
+                feasibility assessment.
               </p>
 
               <a href="/contact" className="btn btn-primary">

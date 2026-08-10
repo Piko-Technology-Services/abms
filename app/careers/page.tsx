@@ -10,18 +10,18 @@ export default function CareersPage() {
           {/* HERO ------------------------------------------------------- */}
           <div className="hero overlay">
             <div className="img-bg rellax">
-              <img src="/images/hero_2.jpg" alt="Contact ABMS Limited" className="img-fluid" />
+              <img src="/images/new/careers.jpg" alt="Contact ABMS Limited" className="img-fluid" />
             </div>
             <div className="container">
               <div className="row align-items-center justify-content-start">
                 <div className="col-lg-6 mx-auto text-center">
                   <h1 className="heading" data-aos="fade-up">
-                    Contact
+                    Careers at ABMS
                   </h1>
                   <p data-aos="fade-up">
-                    Speak with our team about mining services, mining support,
-                    general trading or logistics requirements anywhere in
-                    Zambia.
+                    Explore opportunities with a Zambian leader in mining support,
+                    logistics, procurement and general trading. Join our team and
+                    contribute to operational excellence across projects in Zambia.
                   </p>
                 </div>
               </div>
@@ -44,9 +44,7 @@ export default function CareersPage() {
               </div>
 
               <div className="col-lg-5">
-                <div className="content-placeholder">
-                  Careers Hero Image
-                </div>
+                <img src="/images/new/careers2.jpg" alt="Careers at ABMS Limited" className="img-fluid rounded" />
               </div>
             </div>
           </div>
@@ -57,9 +55,7 @@ export default function CareersPage() {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-lg-6">
-                <div className="content-placeholder">
-                  ABMS Team Image
-                </div>
+                    <img src="/images/new/careers3.jpg" alt="Careers at ABMS Limited" className="img-fluid rounded" />
               </div>
 
               <div className="col-lg-6">
@@ -68,14 +64,17 @@ export default function CareersPage() {
                 <h2>Grow With a Team Built on Unity</h2>
 
                 <p>
-                  Placeholder content describing the ABMS work environment,
-                  professional culture, teamwork, and career-development
-                  opportunities.
+                  ABMS offers a professional environment focused on safety,
+                  teamwork and continuous improvement. Our people work together
+                  across operations, logistics and support services to deliver
+                  reliable outcomes for mining clients in Zambia.
                 </p>
 
                 <p>
-                  Placeholder content describing the company’s commitment to
-                  professional growth, safety, innovation, and excellence.
+                  We support employee development through mentoring, skills
+                  training and certifications. Our commitment to safety,
+                  innovation and local empowerment helps staff build long-term
+                  careers in the industry.
                 </p>
               </div>
             </div>
@@ -92,8 +91,9 @@ export default function CareersPage() {
                 <h2>Opportunities to Learn and Grow</h2>
 
                 <p>
-                  Placeholder introduction to the benefits of working with
-                  ABMS Limited.
+                  Working with ABMS means gaining hands-on experience in mining
+                  operations, logistics and procurement within a company that
+                  values local talent and career advancement.
                 </p>
               </div>
             </div>
@@ -106,8 +106,8 @@ export default function CareersPage() {
                   <h3>Professional Growth</h3>
 
                   <p>
-                    Placeholder content about training, mentorship, and career
-                    development.
+                    Access training programs, mentorship from industry leaders
+                    and structured pathways to advance your role within the company.
                   </p>
                 </article>
               </div>
@@ -119,8 +119,9 @@ export default function CareersPage() {
                   <h3>Industry Exposure</h3>
 
                   <p>
-                    Placeholder content about exposure to mining, logistics,
-                    procurement, and industrial projects.
+                    Learn through practical involvement in mining support services,
+                    transport logistics and procurement across copper belt and rural
+                    project sites.
                   </p>
                 </article>
               </div>
@@ -132,8 +133,8 @@ export default function CareersPage() {
                   <h3>Collaborative Culture</h3>
 
                   <p>
-                    Placeholder content about teamwork, unity, and shared
-                    professional goals.
+                    Join a team that values cooperation, shared goals and dependable
+                    support across departments to meet client expectations.
                   </p>
                 </article>
               </div>
@@ -197,8 +198,10 @@ export default function CareersPage() {
                 <h2>Interested in Working With ABMS?</h2>
 
                 <p>
-                  Placeholder content inviting qualified professionals to
-                  submit their CVs for future opportunities.
+                  If you are passionate about supporting Zambia’s mining and
+                  logistics sectors, submit your resume and cover letter. We
+                  review general applications for future roles in operations,
+                  safety, administration and field support.
                 </p>
               </div>
 

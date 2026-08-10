@@ -8,7 +8,6 @@ export type Page =
   | "industries"
   | "hse"
   | "careers"
-  | "news"
   | "procurement"
   | "contact";
 
@@ -74,9 +73,7 @@ export default function Header({ active }: HeaderProps) {
                   <a href="/careers">Careers</a>
                 </li>
 
-                <li className={cls("news")}>
-                  <a href="/news">News</a>
-                </li>
+                
 
                 <li className={cls("procurement")}>
                   <a href="/procurement">Procurement</a>

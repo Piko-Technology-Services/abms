@@ -20,7 +20,7 @@ export default function ServicesContent({
   services,
   targetIndustries,
 }: ServicesContentProps) {
-  const galleryImages = ["gal_5.jpg", "gal_6.jpg", "gal_3.jpg", "gal_4.jpg"];
+  const galleryImages = ["services/mining.jpg", "services/mining_support.jpg", "services/tading.jpg", "services/logistics.jpg"];
 
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const railFillRef = useRef<HTMLDivElement | null>(null);
