@@ -13,7 +13,9 @@ import {
 } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Official Website — African Brotherhood Mining Services & General Trading Limited",
+  description:
+    "African Brotherhood Mining Services & General Trading Limited, our expertise, values and commitment to delivering quality mining and industrial solutions across Zambia.",
 };
 
 export default function Home() {
