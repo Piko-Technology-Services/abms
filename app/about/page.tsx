@@ -24,27 +24,27 @@ export default function AboutPage() {
   const leadershipTeam = [
     {
       name: "Moabi Makabe",
-      role: "Chief Executive Officer",
+      role: "Chief Executive Officer/MD",
       description:
         "Moabi Makabe is the Chief Executive Officer and an accomplished Metallurgical Engineer with over 16 years of international experience across gold, platinum group metals (PGMs), autocatalyst manufacturing, and uranium processing. He brings a unique combination of technical expertise, strategic leadership, and operational excellence gained from leading complex metallurgical and mining operations. Throughout his career, Moabi has successfully led multidisciplinary teams, driven operational transformation, optimized processing performance, and delivered sustainable business growth across diverse mining and processing environments. His expertise spans mineral processing, plant optimization, production management, project execution, and continuous improvement, with a strong focus on safety, innovation, environmental stewardship, and value creation. As CEO, Moabi provides the strategic direction for the company, championing operational excellence, responsible resource development, and long-term stakeholder value. His leadership is underpinned by a commitment to building high-performing teams, fostering innovation, and delivering sustainable solutions that position the company for continued growth in the mining and metallurgical sectors.",
     },
     {
       name: "Cornelius Ngandu",
-      role: "Financial Leader",
+      role: "Business Development & Marketing Director",
       description:
         "Cornelius Ngandu is an accomplished financial leader with over 17 years of specialized management Throughout accounting experience in the mining sector. Holding an Advanced Diploma in Management Accounting from the Chartered Institute of Management Accountants (CIMA), he possesses a strong foundation in cost control, financial strategy, and operational efficiency within highly complex industrial environments. , Cornelius Ngandu has proven highly adept at managing the financial complexities of large-sc their distinguished career ale mining operations. Most recently, he served as an expatriate finance profession for Lotus Africa in Malawi, contributing financial expertise to the key international operations. Known for their analytical rigor and strategic mindset, he excel at transforming operational data into profitable business strategies, managing cross-border financial frameworks, and driving sustainable fiscal performance in demanding environments.",
     },
     {
       name: "Benny Mumba",
-      role: "Strategic Finance Executive",
+      role: "Finance & Administration Director",
       description:
         "Benny Mumba is a strategic finance executive with over 15 years' experience across mining, industrial, and security sectors. He has held senior roles including Chief Accountant at Lotus Africa Limited's Kayelekera Uranium Mine (Malawi), having previously held senior roles as Head of Accounts & Finance at Octopus Security Limited, Financial Accountant at Afrox Zambia (Linde Group), and Financial Controller at Bulk Mining Explosives Zambia Limited. He also built finance functions from scratch at Ore Search Drilling and Capital Drilling, both mining services firms. Benny brings strong governance, ERP transformation expertise, and a proven record of driving profitability, combines technical expertise with hands-on leadership.",
     },
     {
       name: "Malama Brian Bwembya",
-      role: "Procurement and Operations Leader",
+      role: "Procurement & Operations Director",
       description:
-        "Malama Brian Bwembya is an accomplished Procurement and Operations Leader with over 16 years of progressive experience delivering strategic procurement, supply chain, logistics, and operational solutions across Africa and Asia. Throughout his career, he has managed multimillion-dollar procurement portfolios, led end-to-end supply chain operations for major mining projects, and provided procurement and operations leadership within multinational organizations in the mining, international development, manufacturing, and humanitarian sectors. His expertise spans strategic sourcing, contract management, logistics and warehousing, supplier development, inventory management, governance, and operational transformation. Having worked extensively across Africa and gained valuable international experience in China, Malama brings a global perspective to supplier management, procurement strategy, and business operations. Recognized for building high-performing teams, strengthening operational systems, and fostering strong stakeholder relationships, he is committed to delivering sustainable value through operational excellence, sound commercial practices, and innovative business solutions that support organizational growth and long-term success.",
+        "Malama Brian Bwembya is an accomplished Procurement and Operations Leader with over 16 years of progressive experience delivering strategic procurement, supply chain, logistics, and operational solutions across Africa and Asia. Throughout his career, he has managed multimillion-dollar procurement portfolios, led end-to-end supply chain operations for major mining projects, and provided procurement and operations leadership within multinational organizations in the mining, international development, manufacturing, and humanitarian sectors. His expertise spans strategic sourcing, contract management, logistics and warehousing, supplier development, inventory management, governance, and operational transformation. Having worked extensively across Africa and gained valuable international experience in Asia, Malama brings a global perspective to supplier management, procurement strategy, and business operations. Recognized for building high-performing teams, strengthening operational systems, and fostering strong stakeholder relationships, he is committed to delivering sustainable value through operational excellence, sound commercial practices, and innovative business solutions that support organizational growth and long-term success.",
     },
   ];
 

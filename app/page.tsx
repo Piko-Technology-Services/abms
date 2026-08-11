@@ -45,7 +45,7 @@ export default function Home() {
                 United in Strength. Driven by Excellence.
               </h1>
               <p className="mb-5" data-aos="fade-up">
-                {company.name} is a Zambian-registered company delivering
+                African Brotherhood Mining Services & General Trading Limited is a Zambian-registered company delivering
                 reliable mining services, mining support, general trading
                 and logistics solutions &mdash; built by nineteen African
                 professionals and serving clients across Zambia and the
